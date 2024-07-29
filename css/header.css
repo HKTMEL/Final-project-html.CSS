@@ -1,0 +1,157 @@
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: aqua; */
+    padding: 10px 0;
+}
+
+.top-bar{
+    /* background-color: green; */
+    font-size: 12px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom:1px solid var(--gray-color) ;
+}
+
+.top-contact, .button-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.top-contact >span{
+    display: flex;
+    align-items: center;
+    /* background-color: rgb(229, 255, 0); */
+}
+
+.icon{
+    width: 20px;
+    height: 20px;
+    color: black;
+}
+
+.social-links {
+    display: flex;
+    color: black;  
+    gap: 5px;  
+}
+
+.social-links .icon{
+    width: 10px;
+    height: 10px;
+}
+
+.social-links > a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    /* background: #8a6161; */
+    /* padding: 2px; */
+    border: 1px solid #000000;
+    border-radius: 50%;
+
+}
+
+.button-links button{
+    background-color: var(--red-color);
+    border: none;
+    color: #ffff;
+    padding: 10px 15px;
+
+}
+
+
+
+.menu-bar{
+    /* background-color: bisque; */
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.menu-icon{
+    color: var(--red-color);
+    height: 30px;
+    width: 30px;
+}
+
+.mobile-nav-links.active{
+    background-color:  #000000b6;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: ; */
+    align-items: center;
+    gap :50px;
+    padding: 20px;
+}
+
+.mobile-nav-links.hidden{
+    display: none;
+}
+
+.close-nav{
+    position: relative;
+    left: 100px;
+    top: 30px;
+    color: #ffff;
+    width: 30px;
+    transform: scale(1.5);
+}
+
+.desktop-nav{
+    display: none;
+}
+
+.desktop-nav ul{
+    display: flex;
+    gap: 20px;
+}
+
+.mobile-nav ul{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffff;
+    width: 70%;
+    margin-top: 50px;
+}
+
+.mobile-nav ul li{
+    padding: 10px 5px;
+    border-bottom: 1px solid;
+    font-size: 18px;
+    font-weight: 700;
+}
+.mobile-nav a , .desktop-nav a{
+    color: #000000;
+}
+
+
+
+@media screen and (min-width:834px){
+    .top-bar{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+    .mobile-nav{
+        display: none;
+    }
+    .desktop-nav{
+        padding: 0 30px;
+        display: flex;
+    }
+}
